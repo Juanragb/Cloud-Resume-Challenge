@@ -47,3 +47,26 @@ window.addEventListener("scroll", () => {
     scrollIndicator.style.opacity = "1";
   }
 });
+
+// Update Counter
+const visitCounter = document.getElementById("visitCounter");
+
+const localfunctionUrl = "http://localhost:7071/api/http_trigger";
+
+async function updateVisitCounter() {
+  try {
+    const response = await fetch(functionUrl);
+    if (response.ok) {
+      const data = await response.json();
+      const visitas = data.visitas;
+      visitCounter.textContent = visitas;
+      visitCounter.style.display = "inline";
+    } else {
+      console.error("Error al actualizar el contador:", response.status);
+    }
+  } catch (error) {
+    console.error("Error en la solicitud:", error);
+  }
+}
+
+updateVisitCounter();

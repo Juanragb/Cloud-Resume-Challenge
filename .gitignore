@@ -1,1 +1,83 @@
+# Archivos de Python
+__pycache__/
+*.py[cod]
+*.so
+*.pyd
+*.pyo
+*.pyc
+
+# Entornos virtuales
+env/
+venv/
+.venv/
+
+# Configuración de VS Code
+.vscode/
+*.code-workspace
+
+# Configuración de IDEs y editores
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+.DS_Store
+
+# Archivos de dependencias
+Pipfile
+Pipfile.lock
+poetry.lock
+
+# Archivos de logs y temporales
+logs/
+*.log
+*.tmp
+*.cache
+*.bak
+*.swp
+*.swo
+
+# Archivos de sistema
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Azure Functions y configuraciones
+local.settings.json
+azure-functions-core-tools/
+storage_emulator_*
+
+# Node.js 
+node_modules/
+package-lock.json
+yarn.lock
+npm-debug.log
+
+# Docker
+.dockerignore
+docker-compose.override.yml
+
+# Terraform
+.terraform/
+terraform.tfstate
+terraform.tfstate.backup
+*.tfvars
+
+# Archivos de compilación
+build/
+dist/
+*.egg-info/
+
+# Seguridad
+.env
+*.pem
+*.key
+*.crt
+secrets.json
+config.ini
+
+#Otros
 Notes.md
+*.pdf
+.vscode/
