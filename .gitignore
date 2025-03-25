@@ -76,8 +76,17 @@ dist/
 *.crt
 secrets.json
 config.ini
+cypress.env.json
+.env.local
+.env*.local
 
 #Otros
 Notes.md
 *.pdf
-.vscode/
+
+# Carpetas generadas por Cypress
+cypress/downloads/
+cypress/screenshots/
+cypress/videos/
+cypress/fixtures/generated/  # Si generas fixtures dinámicamente
+.cypress-cache/
