@@ -62,12 +62,21 @@ resource "azurerm_cosmosdb_account" "cosmosdb_account" {
   resource_group_name        = azurerm_resource_group.rg.name
   offer_type                 = "Standard"
   kind                       = "GlobalDocumentDB"
+  capabilities {
+    name = "EnableServerless"
+  }
   consistency_policy {
     consistency_level = "Session"
   }
   geo_location {
     location          = azurerm_resource_group.rg.location
     failover_priority = 0
+  }
+  backup {
+    type = "Periodic"
+    interval_in_minutes = 1440
+    retention_in_hours = 48
+    storage_redundancy = "Local"
   }
 }
 
@@ -198,6 +207,7 @@ resource "azurerm_cdn_endpoint" "cdn_endpoint" {
     }
   }
 
+  origin_host_header = azurerm_storage_account.web_storage_account.primary_web_host
   origin {
     name      = "${azurerm_storage_account.web_storage_account.name}-origin"
     host_name = azurerm_storage_account.web_storage_account.primary_web_host
@@ -214,7 +224,7 @@ resource "azurerm_cdn_endpoint_custom_domain" "cdn_custom_domain" {
   }
 }
 
-########################################### Azure Monitor #####################################################
+########################################## Azure Monitor #####################################################
 
 resource "azurerm_monitor_action_group" "action_group" {
   name                = "actiongroup1"
