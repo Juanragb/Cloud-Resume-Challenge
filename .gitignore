@@ -50,7 +50,6 @@ storage_emulator_*
 
 # Node.js 
 node_modules/
-package-lock.json
 yarn.lock
 npm-debug.log
 

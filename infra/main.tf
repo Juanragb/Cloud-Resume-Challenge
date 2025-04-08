@@ -133,6 +133,7 @@ resource "azurerm_linux_function_app" "function_app" {
   storage_account_name       = azurerm_storage_account.function_storage_account.name
   storage_account_access_key = azurerm_storage_account.function_storage_account.primary_access_key
   service_plan_id            = azurerm_service_plan.asp.id
+  https_only                  = true
 
   site_config {
     ftps_state = "FtpsOnly"
