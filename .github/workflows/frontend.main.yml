@@ -31,6 +31,10 @@ jobs:
     environment: cloud-resume-secrets
     steps:
     - uses: actions/checkout@v3
+    - name: Set API URL in JavaScript
+      run: |
+        sed -i "s|window.API_ENDPOINT = .*|window.API_ENDPOINT = '${{ secrets.API_URL }}';|g" frontend/script.js
+        grep "window.API_ENDPOINT" frontend/script.js
     - uses: azure/login@v2
       with:
         client-id: ${{ secrets.AZURE_CLIENT_ID }}
@@ -46,7 +50,8 @@ jobs:
           --auth-mode key \
           -d '$web' \
           -s frontend/ \
-          --overwrite 
+          --overwrite
+          --no-wait 
     - name: Purge CDN endpoint
       uses: azure/CLI@v2
       with:
