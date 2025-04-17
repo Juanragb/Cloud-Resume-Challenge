@@ -47,7 +47,6 @@ jobs:
         inlineScript: |
           az storage blob upload-batch \
           --account-name cloudresumechalleng \
-          --auth-mode key \
           -d '$web' \
           -s frontend/ \
           --overwrite
