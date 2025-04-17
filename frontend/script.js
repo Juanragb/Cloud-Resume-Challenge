@@ -103,10 +103,8 @@ function closeBanner(element) {
 // ===== CONTADOR DE VISITAS =====
 window.API_ENDPOINT = "";
 async function updateVisitCounter(visitorId) {
-  const API_URL = window.API_ENDPOINT;
-
   try {
-      const response = await fetch(API_URL, {
+      const response = await fetch(window.API_ENDPOINT, {
           method: 'GET',
           credentials: 'include',
           headers: {
