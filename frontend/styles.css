@@ -31,7 +31,7 @@ body {
     margin: 0 auto;
     padding: 1rem;
     display: flex;
-    justify-content:center;
+    justify-content: center;
     align-items: center;
 }
 
@@ -163,7 +163,6 @@ body {
     }
 }
 
-
 /* Main Content */
 .main-content {
     max-width: 1200px;
@@ -187,7 +186,8 @@ body {
     line-height: 1.6;
 }
 
-.section ul {
+/* List styles - general */
+.section ul:not(.tech-list):not(.education-list):not(.experience-list) {
     padding-left: 1.5rem;
     margin-top: 0.5rem;
     line-height: 1.6;
@@ -201,7 +201,7 @@ body {
 .education-timeline {
     display: flex;
     flex-direction: column;
-    gap: 3rem;
+    gap: 1.5rem;
 }
 
 .education-item {
@@ -213,25 +213,75 @@ body {
 .education-item h3 {
     font-size: 1.25rem;
     color: #1a1a1a;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.2rem;
 }
 
 .institution {
     color: #4a5568;
-    margin-bottom: 0.25rem;
+    margin-bottom: 0;
     font-weight: 500;
+    display: inline;
+    margin-right: 0.5rem;
 }
 
 .period {
     color: #718096;
     font-size: 0.875rem;
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
+    display: inline;
 }
 
 .description {
-    color: #4a5568;
+    margin-top: 1.5rem;
+    margin-bottom: 0.2rem;
 }
 
+.education-list {
+    padding-left: 1.5rem;
+    margin-top: 0;
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+
+.subtitle {
+    font-size: 0.9rem;
+    color: #718096;
+    margin-bottom: 0.5rem;
+}
+
+/* Experience Section */
+.experience-timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.experience-item {
+    position: relative;
+    padding-left: 1.5rem;
+    border-left: 4px solid #3b82f6;
+}
+
+.experience-item h3 {
+    font-size: 1.25rem;
+    color: #1a1a1a;
+    margin-bottom: 0.2rem;
+}
+
+.company {
+    color: #4a5568;
+    margin-bottom: 0;
+    font-weight: 500;
+    display: inline;
+    margin-right: 0.5rem;
+}
+
+.experience-list {
+    padding-left: 1.5rem;
+    margin-top: 0;
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
 
 /* Certifications */
 .cert-grid {
@@ -321,41 +371,6 @@ body {
     border-bottom: none;
 }
 
-
-/* Experience */
-.experience-timeline {
-    display: flex;
-    flex-direction: column;
-    gap: 3rem;
-}
-
-.experience-item {
-    position: relative;
-    padding-left: 1.5rem;
-    border-left: 4px solid #3b82f6;
-}
-
-.experience-item h3 {
-    font-size: 1.25rem;
-    color: #1a1a1a;
-    margin-bottom: 0.5rem;
-}
-
-.company {
-    color: #4a5568;
-    margin-bottom: 0.25rem;
-}
-
-.period {
-    color: #718096;
-    font-size: 0.875rem;
-    margin-bottom: 1rem;
-}
-
-.description {
-    color: #4a5568;
-}
-
 /* Footer */
 .footer {
     background-color: #1a1a1a;
@@ -386,11 +401,13 @@ body {
 
 /* Cookies banner */
 .cookie-consent {
-z-index: 99;
-position: fixed;
-max-width: 22rem;
-left: 6.5rem;
-bottom: 25px;
+    z-index: 99;
+    position: fixed;
+    max-width: 22rem;
+    left: 6.5rem;
+    bottom: 25px;
+}
+
 .cookie-button {
     transition: all 0.4s cubic-bezier(0.65, 0.05, 0.36, 1);
     transform: scale(0) rotate(-200deg);
@@ -405,14 +422,15 @@ bottom: 25px;
     height: 60px;
     width: 60px;
 }
+
 .cookie-popin {
     &::before {
-    height: 2.4rem;
-    width: 1.4rem;
-    left: 0;
-    bottom: 0.7rem;
+        height: 2.4rem;
+        width: 1.4rem;
+        left: 0;
+        bottom: 0.7rem;
     }
-    z-index:99;
+    z-index: 99;
     position: relative;
     box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.2);
     border-radius: 0.5rem;
@@ -420,64 +438,65 @@ bottom: 25px;
     padding: 1rem 1.75rem;
     transform: scale(0);
     transition: transform 0.3s cubic-bezier(0.65, 0.05, 0.36, 1);
-    .title {
+}
+
+.cookie-popin .title {
     font-weight: 900;
     font-size: 1.4rem;
     color: #333;
-    }
-    .description {
+}
+
+.cookie-popin .description {
     font-size: 0.8rem;
     margin-bottom: 0.9rem;
     color: #999;
-    a {
-        color: #52bab3;
-    }
-    }
-    .user-choice {
-    &::after {
-        z-index: -1;
-        content: "";
-        border-top-right-radius: 0.2rem;
-        box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.2);
-        position: absolute;
-        height: 1.3rem;
-        width: 1.3rem;
-        background: #fff;
-        left: 1.8rem;
-        margin-top: 1rem;
-        transform: rotate(45deg);
-        left: -0.4rem;
-    }
-    .auth-button {
-        user-select: none;
-        text-align: center;
-        text-transform: uppercase;
-        background-color: #292e49;
-        color: #fff;
-        padding: 0.4rem 1rem;
-        border-radius: 0.2rem;
-        display: inline-block;
-        cursor: pointer;
-        box-shadow: 0 0.18rem 0.3rem 0.05rem rgba(0, 0, 0, 0.2);
-        font-size: 0.7rem;
-        &-light {
-        background-color: #fff;
-        color: #292e49;
-        }
-    }
-    }
 }
 
-&.-deploy {
-    .cookie-button {
+.cookie-popin .description a {
+    color: #52bab3;
+}
+
+.cookie-popin .user-choice::after {
+    z-index: -1;
+    content: "";
+    border-top-right-radius: 0.2rem;
+    box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.2);
+    position: absolute;
+    height: 1.3rem;
+    width: 1.3rem;
+    background: #fff;
+    left: 1.8rem;
+    margin-top: 1rem;
+    transform: rotate(45deg);
+    left: -0.4rem;
+}
+
+.cookie-popin .auth-button {
+    user-select: none;
+    text-align: center;
+    text-transform: uppercase;
+    background-color: #292e49;
+    color: #fff;
+    padding: 0.4rem 1rem;
+    border-radius: 0.2rem;
+    display: inline-block;
+    cursor: pointer;
+    box-shadow: 0 0.18rem 0.3rem 0.05rem rgba(0, 0, 0, 0.2);
+    font-size: 0.7rem;
+}
+
+.cookie-popin .auth-button-light {
+    background-color: #fff;
+    color: #292e49;
+}
+
+.cookie-consent.-deploy .cookie-button {
     transform: scale(1) rotate(0);
-    }
-    .cookie-popin {
-    transform: scale(1);
-    }
-}
 }
 
+.cookie-consent.-deploy .cookie-popin {
+    transform: scale(1);
+}
 
 /* Responsive Design */
 @media (min-width: 640px) {
@@ -499,9 +518,8 @@ bottom: 25px;
     }
 }
 
-
 @media (max-width: 639px) {
     .nav-container {
-        justify-content: flex-start; /*Align menu button to the left in mobile version*/
+        justify-content: flex-start;
     }
 }
