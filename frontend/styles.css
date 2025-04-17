@@ -182,6 +182,57 @@ body {
     margin-bottom: 2rem;
 }
 
+.section p {
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+
+.section ul {
+    padding-left: 1.5rem;
+    margin-top: 0.5rem;
+    line-height: 1.6;
+}
+
+.section li {
+    margin-bottom: 0.5rem;
+}
+
+/* Education Section */
+.education-timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.education-item {
+    position: relative;
+    padding-left: 1.5rem;
+    border-left: 4px solid #3b82f6;
+}
+
+.education-item h3 {
+    font-size: 1.25rem;
+    color: #1a1a1a;
+    margin-bottom: 0.5rem;
+}
+
+.institution {
+    color: #4a5568;
+    margin-bottom: 0.25rem;
+    font-weight: 500;
+}
+
+.period {
+    color: #718096;
+    font-size: 0.875rem;
+    margin-bottom: 1rem;
+}
+
+.description {
+    color: #4a5568;
+}
+
+
 /* Certifications */
 .cert-grid {
     display: grid;
@@ -445,5 +496,12 @@ bottom: 25px;
 
     .hero-content h1 {
         font-size: 4rem;
+    }
+}
+
+
+@media (max-width: 639px) {
+    .nav-container {
+        justify-content: flex-start; /*Align menu button to the left in mobile version*/
     }
 }

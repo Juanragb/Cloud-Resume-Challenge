@@ -10,23 +10,20 @@
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
-            <!-- <h1 class="nav-logo">Hi! I'm Juanra</h1> -->
             <button class="mobile-menu-btn" aria-label="Toggle menu">
-                <svg class="menu-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <line x1="3" y1="12" x2="21" y2="12"></line>
-                    <line x1="3" y1="6" x2="21" y2="6"></line>
-                    <line x1="3" y1="18" x2="21" y2="18"></line>
-                </svg>
+                <img src="media/toggle-icon.svg" alt="menu icon">
             </button>
             <div class="nav-links">
                 <a href="#about">About Me</a>
                 <a href="#experience">Experience</a>
+                <a href="#education">Education</a>
                 <a href="#certifications">Certifications</a>
             </div>
         </div>
         <div class="mobile-menu">
             <a href="#about">About Me</a>
             <a href="#experience">Experience</a>
+            <a href="#education">Education</a>
             <a href="#certifications">Certifications</a>
         </div>
     </nav>
@@ -38,10 +35,7 @@
             <p>This page has been viewed <span style="display: none;" id="visitCounter">0</span> times :)</p>
         </div>
         <div class="scroll-indicator" id="scrollIndicator">
-            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M12 5v14"></path>
-                <path d="m19 12-7 7-7-7"></path>
-            </svg>
+            <img src="media/arrow-icon.svg" alt="arrow-icon">
         </div>
     </header>
 
@@ -52,30 +46,135 @@
         <section id="about" class="section">
             <h2>About Me</h2>
             <p>
-                I'm a backend software developer with a strong passion for building scalable, efficient, and secure systems. I have a background in industrial engineering and transitioned into software development, leveraging automation and data-driven solutions to improve processes. I'm always eager to learn new technologies, enhance system performance, and contribute to impactful projects that solve real-world problems.
+                I'm an Industrial Electronics Engineer with a strong background in software development and a passion for building scalable, efficient, and secure systems. I’ve designed and implemented web platforms for photovoltaic system monitoring, project management, and energy market automation.
+            </p>
+            <p>
+                I’m driven by technology that solves real-world problems, I thrive on innovation. I'm continuously learning, currently focused on cloud and data engineering to build even more impactful solutions. 
+            </p>
+            <p>
+                When I’m not coding, I enjoy diving into new tech tools where engineering meets software.
             </p>
         </section>
+
+
+        <!-- website -->
+        <section id="about-website" class="section">
+            <h2>About this website</h2>
+            <p>
+                This website is hosted on Microsoft Azure and is part of the 
+                <a target="_blank" href="https://cloudresumechallenge.dev/docs/the-challenge/azure/">
+                    Cloud Resume Challenge
+                </a>, 
+                a project designed to demonstrate cloud and DevOps skills through a real-world scenario. 
+                The challenge includes deploying this resume as a static website on Azure, building and connecting APIs 
+                with Azure Functions, using CosmosDB to store data like a visitor counter, and managing infrastructure 
+                through Infrastructure as Code (IaC).
+            </p>
+            <p>As part of the challenge, I worked on the following:</p>
+            <ul>
+                <li><strong>HTML/CSS/JavaScript</strong>: Designed and coded the resume site from scratch.</li>
+                <li><strong>Azure Storage Static Website</strong>: Worked on Azure Storage accounts and storage Services for a static website.</li>
+                <li><strong>Custom Domain + DNS</strong>: Connected a custom domain via DNS and Azure CDN endpoint.</li>
+                <li><strong>Visitor Counter</strong>: Built a counter using JavaScript + Azure Functions + CosmosDB.</li>
+                <li><strong>Backend API (Python)</strong>: Developed with Python using Azure Functions.</li>
+                <li><strong>Testing</strong>: Included Cypress tests for the frontend and some tests for backend logic.</li>
+                <li><strong>Infrastructure as Code (IaC)</strong>: Deployed all cloud resources using Terraform.</li>
+                <li><strong>CI/CD Pipelines</strong>: Automated deployment using workflows in GitHub Actions for both frontend and backend.</li>
+            </ul>
+        </section>
+        
 
 
         <!-- Experience Section -->
         <section id="experience" class="section">
             <h2>Experience</h2>
             <div class="experience-timeline">
+
                 <div class="experience-item">
-                    <h3>Backend developer</h3>
+                    <h3>Software developer</h3>
                     <p class="company">OSR Solar</p>
                     <p class="period">feb 2022 - oct 2024</p>
-                    <p class="description">Development of software products focused on photovoltaic solar energy, increasing the value of sustainable investments.</p>
+                    <p class="description">Development of software products focused on photovoltaic solar energy, increasing the value of sustainable investments.
+                        <ul>
+                            <li>Developed a unified web platform for managing different components of photovoltaic systems (inverters, meters, data loggers, batteries...).</li>
+                            <li>Implemented data acquisition and storage from photovoltaic systems for automatic generation of performance reports and photovoltaic production analysis.</li>
+                            <li>Created automated alert management for various devices in photovoltaic systems.</li>
+                            <li>Developed a web platform for project management aimed at project developers and installers, helping to manage projects through all stages by centralizing all information through the Odoo ERP system, using its Python SDK.</li>
+                            <li>Managed photovoltaic offers using Odoo, AWS Lambda functions and S3 storage, utilizing their Python SDKs.</li>
+                            <li>Developed REST Web APIs for various products, using Django REST Framework (DRF) for backend-frontend communication.</li>
+                            <li>Participated in an R&D drone thermography project for fault detection in solar panels through computer vision with OpenCV and TensorFlow.</li>
+                        </ul>
+                    </p>
                 </div>
+
                 <div class="experience-item">
-                    <h3>Backend developer</h3>
+                    <h3>Software developer</h3>
                     <p class="company">Ingebau</p>
                     <p class="period">sept 2021 - jan 2022</p>
-                    <p class="description">Software development and process automation.</p>
+                    <p class="description">
+                        <ul>
+                            <li>Development of automation systems for operations in the wholesale electricity market (OMIE).</li>
+                            <li>Automation of internal processes and procedures through custom software solutions.</li>
+                      </ul>
+                    </p>
                 </div>
+
+                <div class="experience-item">
+                    <h3>Automation Intern</h3>
+                    <p class="company">Robotics, Automation and Computer Vision Research Group (GRAV) | University of Jaén</p>
+                    <p class="period">sept 2018 - dic 2018</p>
+                    <p class="description">
+                        <ul>
+                            <li>Development of a Spidercam prototype with 3D reconstruction using MATLAB.</li>
+                            <li>Participation in other R&D projects such as the Electronic Nose.</li>
+                        </ul>
+                    </p>
+                </div>
+
             </div>
         </section>
 
+
+        <!-- Education Section -->
+        <section id="education" class="section">
+            <h2>Education</h2>
+            <div class="education-timeline">
+                <div class="education-item">
+                    <h3>Industrial Electronics Engineering</h3>
+                    <p class="institution">University of Jaén</p>
+                    <p class="period">2015 - 2020</p>
+                    <p class="description">
+                        Comprehensive training in industrial electronics and automation, encompassing:
+                        <ul>
+                            <li>Integration of electronic systems in industrial environments.</li>
+                            <li>Control and automation of production processes.</li>
+                            <li>Fields such as robotics, microprocessors, industrial communications, various branches of electronics, circuit simulations, energy management and control, sensor technology, instrumentation, and industrial programming.</li>
+                            <li><strong>Final degree project: </strong>
+                                Three-phase motor control techniques</li>
+                        </ul>
+                    </p>
+                </div>
+                <div class="education-item">
+                    <h3>Master’s Degree in Intelligent Systems in Energy and Transport </h3>
+                    <p class="institution">University of Seville</p>
+                    <p class="period">2020 - 2022</p>
+                    <p>Honored with the Extraordinary Achievement Award for my Master's studies</p>
+                    <p class="description">
+                        Key competencies acquired during the Master's Degree:
+                        <ul>
+                            <li>Design and implementation of innovative technological solutions in industrial environments, focusing on energy and transport sectors.</li>
+                            <li>Conception, planning, and execution of projects integrating intelligent systems, assessing their social and economic impacts.</li>
+                            <li>Expertise in analyzing large datasets from sensors and intelligent devices, and in designing decision-support systems.</li>
+                            <li>Selection and implementation of secure and efficient communication infrastructures, particularly in systems with distributed intelligence.</li>
+                            <li>Understanding of smart grids, intelligent building control systems, and energy consumption optimization.</li>
+                            <li>Insights into intelligent transportation systems, including traffic management and advanced vehicle technologies.</li>
+                            <li>Leadership in innovation projects and development of entrepreneurial ventures.</li>
+                            <li><strong>Master's Final Project: </strong>Estimating air quality using Artificial Intelligence techniques</li>
+                        </ul>
+                    </p>
+                </div>
+            </div>
+        </section>
 
         <!-- Certifications Section -->
         <section id="certifications" class="section">
@@ -97,32 +196,16 @@
             <div class="tech-grid">
 
                 <div class="tech-card">
-                    <div class="tech-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M12 2L2 7l10 5 10-5-10-5z"/>
-                            <path d="M2 17l10 5 10-5"/>
-                            <path d="M2 7v10l10 5v-10"/>
-                            <path d="M22 7v10l-10 5v-10"/>
-                        </svg>
-                    </div>
+                    <img src="media/cloud.svg" alt="cloud icon" class="tech-icon">
                     <h3>Cloud Platforms</h3>
                     <ul class="tech-list">
-                        <li>Microsoft Azure: Azure Storage, Azure Functions, Azure Fundamentals...</li>
-                        <li>Docker</li>
-                        <li>Terraform</li>
-                        <li>CI/CD</li>
+                        <li><strong>Microsoft Azure: </strong> Azure CLI, Azure Fundamentals, Azure Python SDK, Azure Storage, Azure Functions, Azure CDN, CosmosDB...</li>
+                        <li><strong>AWS: </strong>AWS lambdas, S3, Python SDK</li>
                     </ul>
                 </div>
 
                 <div class="tech-card">
-                    <div class="tech-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-                            <polyline points="14 2 14 8 20 8"></polyline>
-                            <line x1="12" y1="18" x2="12" y2="12"></line>
-                            <line x1="9" y1="15" x2="15" y2="15"></line>
-                        </svg>
-                    </div>
+                    <img src="media/IaC.svg" alt="iac icon" class="tech-icon">
                     <h3>Infrastructure as Code</h3>
                     <ul class="tech-list">
                         <li>Terraform</li>
@@ -132,29 +215,47 @@
                 </div>
 
                 <div class="tech-card">
-                    <div class="tech-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <polyline points="16 18 22 12 16 6"></polyline>
-                            <polyline points="8 6 2 12 8 18"></polyline>
-                        </svg>
-                    </div>
-                    <h3>Backnd Programming</h3>
+                    <img src="media/programming.svg" alt="Icono programming card" class="tech-icon">
+                    <h3>Programming</h3>
                     <ul class="tech-list">
-                        <li>Python (Django REST Framework, FastAPI)</li>
-                        <li>SQL (PostgreSQL)</li>
-                        <li>Data analisys (Pandas, Numpy, Matplotlib, Scikit Learn)</li>
+                        <li>Python: Django, DRF, Flask, FastAPI</li>
+                        <li>BBDD: SQL (PostgreSQL)</li>
+                        <li>Control Version: Git, Github</li>
+                        <li>OS: Windows, Linux (Ubuntu)</li>
+                        <li>HTML, CSS, JS</li>
                     </ul>
                 </div>
 
                 <div class="tech-card">
-                    <div class="tech-icon">
-                        <svg fill="#3b82f6" width="28" height="28" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path d="M14.25 10.71 11.57 8l2.26-2.26a2.49 2.49 0 0 0 0-3.53 2.5 2.5 0 0 0-3.53 0l-.89.88L8 4.5 5.28 1.75a1.26 1.26 0 0 0-1.76 0L1.75 3.52a1.25 1.25 0 0 0 0 1.77L4.5 8l-.22.22-.89.88-1.75 3.66a1.25 1.25 0 0 0 1.67 1.67l3.62-1.75.49-.49.39-.39.19-.23 2.68 2.68a1.26 1.26 0 0 0 1.76 0l1.77-1.77a1.25 1.25 0 0 0 .04-1.77zm-2.19-8a1.27 1.27 0 0 1 .89.36 1.25 1.25 0 0 1 0 1.77l-1.77-1.72a1.27 1.27 0 0 1 .88-.36zM2.63 4.4 4.4 2.64l.82.82-.87.88.88.88.88-.88 1 1-1.73 1.81zm.13 8.91 1.57-3.23L6 11.74zm4.17-2.4L5.16 9.14 10.3 4l1.76 1.76zm4.67 2.45-2.68-2.67 1.77-1.77.93.93-.88.88.88.89.89-.89.86.87z"></path></g></svg>
-                    </div>
+                    <img src="media/cicd.svg" alt="ci cd icon" class="tech-icon">
+                    <h3>CI/CD & Containers</h3>
+                    <ul class="tech-list">
+                        <li>Github Actions</li>
+                        <li>Docker</li>
+                        <li>Kubernetes</li>
+                    </ul>
+                </div>
+
+                <div class="tech-card">
+                    <img src="media/datanalysis.svg" alt="Data analysis icon" class="tech-icon">
+                    <h3>Data analysis</h3>
+                    <ul class="tech-list">
+                        <li>Python: Pandas, Numpy, Scikit Learn</li>
+                        <li>Visualizations: Matplotlib, Seaborn</li>
+                        <li>Microsoft Fabric: Apache Spark, Notebooks</li>
+                        <li>Jupyter notebooks</li>
+                        <li>Power BI</li>
+                    </ul>
+                </div>
+
+                <div class="tech-card">
+                    <img src="media/tech.svg" alt="Tech icon" class="tech-icon">
                     <h3>Tools & Other Tech</h3>
                     <ul class="tech-list">
-                        <li>Git & Github</li>
-                        <li>Linux (Ubuntu)</li>
-                        <li>VSCode</li>
+                        <li>PLC Programming: TIA Portal (KOP, SCL, AWL)</li>
+                        <li>Circuit Simulation: OrCAD PSpice</li>
+                        <li>Fundamentals of 3D desing: AutoCAD, SolidWorks</li>
+                        <li>IoT</li>
                     </ul>
                 </div>
 
@@ -168,25 +269,16 @@
     <footer class="footer">
         <div class="social-links">
             <a href="https://github.com/juanragb" aria-label="GitHub" target="_blank">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
-                </svg>
+                <img src="media/github-icon.svg" alt="github-icon">
             </a>
-            <a href="https://linkedin.com/in/juan-ramón-garcía-barajas-302298210/" aria-label="LinkedIn" target="_blank">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
-                    <rect x="2" y="9" width="4" height="12"></rect>
-                    <circle cx="4" cy="4" r="2"></circle>
-                </svg>
+            <a href="https://linkedin.com/in/juanragb" aria-label="LinkedIn" target="_blank">
+                <img src="media/linkedin-icon.svg" alt="linkedin-icon">
             </a>
             <a href="mailto:jrgarciabarajas@gmail.com" aria-label="Email" target="_blank">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
-                    <polyline points="22,6 12,13 2,6"></polyline>
-                </svg>
+                <img src="media/mail-icon.svg" alt="mail-icon">
             </a>
         </div>
-        <p class="copyright">© <span id="year"></span> Juan Ramón García. All rights reserved.</p>
+        <p class="copyright">© <span id="year"></span> All rights reserved.</p>
     </footer>
 
     <div class="cookie-consent">
