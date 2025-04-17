@@ -101,6 +101,7 @@ function closeBanner(element) {
 }
 
 // ===== CONTADOR DE VISITAS =====
+window.API_ENDPOINT = "";
 async function updateVisitCounter(visitorId) {
   const API_URL = window.API_ENDPOINT;
 
