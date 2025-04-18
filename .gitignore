@@ -1,6 +1,7 @@
 # Archivos de Python
 __pycache__/
 *.py[cod]
+*$py.class
 *.so
 *.pyd
 *.pyo
@@ -10,24 +11,42 @@ __pycache__/
 env/
 venv/
 .venv/
-
-# Configuración de VS Code
-.vscode/
-*.code-workspace
+.Python
 
 # Configuración de IDEs y editores
+.vscode/
+*.code-workspace
 .idea/
 *.suo
 *.ntvs*
 *.njsproj
 *.sln
 *.sw?
-.DS_Store
 
 # Archivos de dependencias
 Pipfile
 Pipfile.lock
 poetry.lock
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Archivos de compilación
+build/
+dist/
+develop-eggs/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
 
 # Archivos de logs y temporales
 logs/
@@ -37,6 +56,8 @@ logs/
 *.bak
 *.swp
 *.swo
+pip-log.txt
+pip-delete-this-directory.txt
 
 # Archivos de sistema
 Thumbs.db
@@ -48,7 +69,7 @@ local.settings.json
 azure-functions-core-tools/
 storage_emulator_*
 
-# Node.js 
+# Node.js
 node_modules/
 yarn.lock
 npm-debug.log
@@ -64,11 +85,6 @@ terraform.tfstate.backup
 .terraform.lock.hcl
 *.tfvars
 
-# Archivos de compilación
-build/
-dist/
-*.egg-info/
-
 # Seguridad
 .env
 *.pem
@@ -79,8 +95,9 @@ config.ini
 cypress.env.json
 .env.local
 .env*.local
+config.local.js
 
-#Otros
+# Otros
 Notes.md
 *.pdf
 
@@ -88,5 +105,54 @@ Notes.md
 cypress/downloads/
 cypress/screenshots/
 cypress/videos/
-cypress/fixtures/generated/  # Si generas fixtures dinámicamente
+cypress/fixtures/generated/
 .cypress-cache/
+
+# Archivos de pruebas y cobertura
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+nosetests.xml
+coverage.xml
+*.cover
+.hypothesis/
+.pytest_cache/
+
+# Archivos de documentación
+/site
+docs/_build/
+
+# Archivos específicos de proyectos
+instance/
+.webassets-cache
+.scrapy
+target/
+.ipynb_checkpoints
+profile_default/
+ipython_config.py
+
+# Configuración de herramientas
+.python-version
+celerybeat-schedule
+*.manifest
+*.spec
+
+# Archivos específicos de infra
+csx
+.vs
+edge
+Publish
+*.user
+*.suo
+*.cscfg
+*.Cache
+project.lock.json
+/packages
+/TestResults
+/tools/NuGet.exe
+/App_Data
+/secrets
+/data
+.secrets
